@@ -69,7 +69,7 @@ class PostController extends Controller
       $post->title = $title;
       $post->text = $text;
       $post->img = $img;
-      //$post->likes = 0;
+      $post->likes = 0;
       $post->save();
       Redirect::redirectTo('photos');
    }

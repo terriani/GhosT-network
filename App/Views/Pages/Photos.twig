@@ -21,14 +21,14 @@
                 url: '{{ base_url }}like/{{ post.id }}',
               })
                 .then(function (response) {
-                   $('#likes').html(response.data)
+                   $('#likes{{ post.id }}').html(response.data)
                 });
                
                " class="btn-floating btn-large halfway-fab waves-effect waves-light red z-depth-5"><i class="material-icons">favorite</i></a>
               </div>
               {% if post.likes >= 0 %}
               <div class="likes">
-                <span><i class="material-icons left">favorite</i><span id="likes">{{ post.likes }}</span></span>
+                <span><i class="material-icons left">favorite</i><span id="likes{{ post.id }}">{{ post.likes }}</span></span>
               </div>
               {% endif %}
               <br><br>
