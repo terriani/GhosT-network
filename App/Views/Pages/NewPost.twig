@@ -1,0 +1,41 @@
+<div id='NewPost'>
+    {% include "Pages/Navbar.twig" %}
+    <div class='container'>
+        {# View gerada automaticamente via Scooby_CLI 04-12-19 - 02:37:am #}
+        {% if msg %}
+        {{ msg|raw }}
+        {% endif %}
+        <h3 class="center">Novo Post</h3>
+        <br>
+        <div class="row">
+            <form class="col s12" method="POST" action="{{ base_url }}post-store" enctype="multipart/form-data">
+                <input type="hidden" name="csrfToken" value="{{ csrfToken }}">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <input placeholder="Titulo" id="title" type="text" name="title" class="validate" required>
+                        <label for="first_name">Titulo do Post</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" name='img[]' multiple required>
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload de um ou mais arquivos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input placeholder="Texto" id="text" type="text" name="text" class="validate" required>
+                            <label for="first_name">Texto do Post</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+<div id="Home">
+        {% if msg %}
+        {{ msg|raw }}
+    {% endif %}
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <div class="header">
+                    <h2 class="center green-text logo-home">GhosT</h2>
+                    <div class="row center">
+                        <h5 class="col s12 light">Descubra oque outras pessoas postam anonimamente</h5>
+                    </div>
+                </div>
+                <div class="row center">
+                    <a href="{{ base_url }}photos" class="btn-large waves-effect waves-light black lighten-1"><i
+                            class="material-icons right">arrow_forward</i> Ir para o feed</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+        <div class="parallax"><img src="{{ assets }}img/4.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m3">
+                    <div class="icon-block">
+                        <h2 class="center grey-text"><i class="material-icons">add_a_photo</i></h2>
+                        <h5 class="center">Postar</h5>
+                        <p class="light">
+                            GhosT é a nova forma de você expressar uma ideia, um sentimento, ou somente registrar um
+                            momento de forma totalmente anônima e reservada.</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="icon-block">
+                        <h2 class="center grey-text"><i class="material-icons">favorite</i></h2>
+                        <h5 class="center">Curtir</h5>
+                        <p class="light">
+                            Gostou muito de um determinado post ? Aqui você pode curtir quantas vezes quiser um
+                            determinado post com total anonimato.</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="icon-block">
+                        <h2 class="center grey-text"><i class="material-icons">add_comment</i></h2>
+                        <h5 class="center">Comentar</h5>
+                        <p class="light">Gostaria de deixar registrado sua opinião sobre um post específico ? Aqui você
+                            tem a liberdade de se expressar anonimamente, podendo assim fazer uma crítica ou um elogio
+                            sem preocupações.</p>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="icon-block">
+                        <h2 class="center grey-text"><i class="material-icons">timer</i></h2>
+                        <h5 class="center">Duração</h5>
+                        <p class="light">
+                            Postei algo, mas e agora, vai ficar para sempre no feed ? Calma, Todas os posts tem um prazo
+                            de validade de 48 horas, apos este período ele é excluído da nossa base de dados automaticamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="header">
+                    <div class="row center">
+                        <h3 class="center green-text">Simplicidade...</h3>
+                        <h5 class=" col s12 light">Sem login, sem senha, sem tela de cadastro, sem informações
+                            pessoais... Entre e descubra o que as pessoas estão postando
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="{{ assets }}img/2.jpg" alt="Unsplashed background img 2"></div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h4>Fale Conosco</h4>
+                    <form action="{{ base_url }}contact" method="post">
+                        <input type="hidden" name="csrfToken" value="{{ csrfToken }}">
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix grey-text">account_circle</i>
+                                <input id="icon_prefix" type="text" class="validate" name="name" required>
+                                <label for="icon_prefix">Nome</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix grey-text">email</i>
+                                <input id="icon_telephone" type="email" class="validate" name="email" required>
+                                <label for="icon_telephone">Email</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix grey-text">mode_edit</i>
+                                <textarea id="icon_prefix2" class="materialize-textarea" name="message"
+                                    required></textarea>
+                                <label for="icon_prefix2">Menssagem</label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light black left" type="submit" name="action">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="header">
+                    <h3 class="center green-text">Vamos lá ?</h3>
+                    <div class="row center">
+                        <h5 class="col s12 light">Que tal fazer um teste nesta nova plataforma ?</h5>
+                    </div>
+                </div>
+                <div class="row center">
+                    <a href="{{ base_url }}photos" class="btn-large waves-effect waves-light black lighten-1"><i
+                            class="material-icons right">arrow_forward</i> Ir para o feed</a>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="{{ assets }}img/3.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">GhosT NetWork</h5>
+                    <p class="grey-text text-lighten-4">Somos uma pequena rede social, com foco maior no anonimato de
+                        nossos usuários.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Feito por <a class="brown-text text-lighten-3" href="http://viniciusterriani.esy.es">Vinicius
+                    Terriani</a>
+            </div>
+        </div>
+    </footer>
+</div>

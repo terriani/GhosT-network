@@ -1,0 +1,58 @@
+.logo{
+    font-size: 40pt;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 3px #111;
+}
+
+.logo-menu{
+    font-size: 20pt;
+    font-family: 'Cinzel', serif;
+    text-shadow: 1px 1px 3px #111;
+    margin-top: 10px;
+}
+
+.fixed{
+    position: fixed;
+    width: 100vw;
+}
+
+.likes{
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    min-height: 4px;
+    max-width: 200px;
+    background: #e57373;
+    float: left;
+    color: #fff;
+    font-weight: bolder;
+    margin-top: -20px;
+    position: absolute;
+}
+
+.comment-link a{
+    cursor: pointer;
+}
+
+#Photos{
+    overflow-x: hidden !important;
+    display: none;
+}
+
+.loading{
+    overflow-x: hidden !important;
+    display: flex;
+    background-color: #f8f8f8 !important;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    .logo{
+        font-size: 20pt;
+    }
+}

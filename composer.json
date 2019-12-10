@@ -1,0 +1,30 @@
+{
+    "type" : "project",
+	"homepage" : "https://github.com/terriani/ScoobyPHP",
+	"description" : "ScoobyPHP, A litle and very simple PHP framework ",
+    "require":{
+        "twig/twig": "^2.11",
+        "illuminate/database": "^5.8",
+        "larapack/dd": "^1.1",
+        "matthiasmullie/minify": "^1.3",
+        "filp/whoops": "^2.5",
+        "robmorgan/phinx": "0.10.0",
+        "swiftmailer/swiftmailer": "^6.2",
+        "dfridrich/php-mime-type": "^2.0",
+        "jasongrimes/paginator": "^1.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "Helpers\\":"Library/Helpers/",
+            "Core\\":"Library/Core/",
+            "Controllers\\":"App/Controllers/",
+            "Models\\":"App/Models/",
+            "Generics\\":"App/Generics/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3",
+        "friendsoftwig/twigcs": "^3.1",
+        "fzaninotto/faker": "^1.8"
+    }
+}

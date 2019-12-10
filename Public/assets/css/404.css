@@ -1,0 +1,25 @@
+
+.error{
+    background-image: url('../img/404.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    padding: 20px 40px;
+    text-shadow: 0 0 20px #222;
+    color: #f2f2f2;
+}
+
+.title{
+    font-size: 100pt;
+}
