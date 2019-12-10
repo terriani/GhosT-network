@@ -13,11 +13,7 @@
            <div class="card z-depth-5">
              <div class="card-image">
                <img src="{{ post.img }}">
-               {% if post.likes >= 0 %}
-               <div class="likes">
-                 <span><i class="material-icons left">favorite</i><span id="likes">{{ post.likes }}</span></span>
-               </div>
-               {% endif %}
+              
                <a onclick="
                
                axios({
@@ -30,6 +26,11 @@
                
                " class="btn-floating btn-large halfway-fab waves-effect waves-light red z-depth-5"><i class="material-icons">favorite</i></a>
               </div>
+              {% if post.likes >= 0 %}
+              <div class="likes">
+                <span><i class="material-icons left">favorite</i><span id="likes">{{ post.likes }}</span></span>
+              </div>
+              {% endif %}
               <br><br>
              <div class="card-content">
                <span class="card-title">{{ post.title }}</span>
