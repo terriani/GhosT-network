@@ -20,8 +20,7 @@ class CommentController extends Controller
         
         $id = Request::input('post_id');
         $comment = new Comment;
-        Request::formValidate('comment', 'comentário', 'photos', ['required', 'min'], 5);
-        $comment->comment = Request::input('comment');
+        $comment->comment = Request::inputWithStripTags('comment');
         $comment->post_id = $id;
         $comment->save();
         Redirect::redirectBack();

@@ -27,6 +27,28 @@ class Request
     }
 
     /**
+     * Valida e retorna o dados vindo do formulario passando pela strip_tags
+     *
+     * @param string $inputName
+     * @return void
+     */
+    public static function inputWithStripTags(string $inputName)
+    {
+        if (Csrf::csrfTokenValidate()) {
+            if (self::has($inputName)) {
+                if (isset($_REQUEST["$inputName"]) and !empty($_REQUEST["$inputName"])) {
+                    return strip_tags(trim($_REQUEST["$inputName"]));
+                }
+                return false;
+            }
+            //FlashMessage::msgWithGoBack('Atenção...', "O campo $inputName é obrigatório!", 'warning', -1);
+            return false;
+        } else {
+            Redirect::redirectTo('404');
+        }
+    }
+
+    /**
      * Valida e retorna o dados vindo do formulario
      *
      * @param string $inputName

@@ -14,7 +14,7 @@ if (ENV == 'development') {
      define('SITE_LANG', 'pt_br');
 
     //Define o nome do banco de dados a ser usado em desenvolvimento
-    define('DB_NAME', 'photoDb');
+    define('DB_NAME', '');
 
     //Define o usuário do banco de dados em desenvolvimento 
     define('DB_USER', 'root');
@@ -72,13 +72,13 @@ if (ENV == 'development') {
       define('SITE_LANG', 'pt_br');
 
     //Define o nome do banco de dados a ser usado em produção
-    define('DB_NAME', 'u924719103_photoDb');
+    define('DB_NAME', '');
 
     //Define o usuário do banco de dados em produção 
-    define('DB_USER', 'u924719103_terriani');
+    define('DB_USER', '');
 
     //Define a senha do usuário do banco de dados em produção
-    define('DB_PASS', 'terriani020989');
+    define('DB_PASS', '');
 
     //Define o driver de banco de dados
     define('DB_DRIVER', 'mysql');

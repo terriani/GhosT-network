@@ -53,10 +53,22 @@ class PostController extends Controller
    {
       Request::formValidate('title', 'titulo', 'new-post', ['required', 'min'], 3);
       Request::formValidate('text', 'texto', 'new-post', ['required', 'min'], 3);
-      $title = Request::input('title');
-      $text = Request::input('text');
-      if($_FILES['img']['type'][0] != 'image/png' and $_FILES['img']['type'][0] != 'image/jpeg'){
-         $this->Load('Pages', 'newPost', ['msg' => FlashMessage::toast('Opss...', 'A imagem só é aceita nos formatos JPEG ou PNG', 'error')]);
+      $title = Request::inputWithStripTags('title');
+      $text = Request::inputWithStripTags('text');
+      if(
+         $_FILES['img']['type'][0] != 'image/png' and
+         $_FILES['img']['type'][0] != 'image/jpeg' and
+         $_FILES['img']['type'][0] != 'image/gif' and
+         $_FILES['img']['type'][0] != 'video/mpeg' and
+         $_FILES['img']['type'][0] != 'video/mp4' and 
+         $_FILES['img']['type'][0] != 'audio/mpeg' and
+         $_FILES['img']['type'][0] != 'audio/mp3' and
+         $_FILES['img']['type'][0] != 'audio/mpeg3' and
+         $_FILES['img']['type'][0] != 'audio/x-mpeg3' and
+         $_FILES['img']['type'][0] != 'audio/wma' and 
+         $_FILES['img']['type'][0] != 'audio/vnd.wav'
+             ){
+         $this->Load('Pages', 'newPost', ['msg' => FlashMessage::toast('Opss...', 'A imagem só é aceita nos formatos JPEG, PNG, GIF, MP4 e MPEG', 'error')]);
          exit;
       }
       $img = Request::upload('img');

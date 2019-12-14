@@ -42,13 +42,52 @@
 .loading{
     overflow-x: hidden !important;
     display: flex;
-    background-color: #f8f8f8 !important;
+    background-color: #f9f9f9 !important;
     height: 100vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
     overflow: hidden !important;
     flex-direction: column;
+}
+
+.card-content{
+    word-wrap: break-word !important;
+}
+
+.card-image{
+    background: #f9f9f9;
+}
+
+.card img{
+    max-height: 100vh;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card video{
+    max-height: 100vh;
+    max-width: 100%;
+    width: auto !important;
+    height: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35px !important;
+}
+
+.card audio{
+    max-height: 100vh;
+    max-width: 100%;
+    width: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: none !important;
 }
 
 @media screen and (max-width: 600px){

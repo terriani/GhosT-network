@@ -24,6 +24,8 @@ p {
   .header{
       background: rgba(0, 0, 0, 0.7);
       border-radius: 5px;
+      height: 100% !important;
+      width: 100% !important;
   }
 
   .parallax-container{
